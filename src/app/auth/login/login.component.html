@@ -1,0 +1,75 @@
+<div class="gc-login-container" style="
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;">
+
+
+
+<div class="gc-area" >
+	<ul class="gc-circles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+	</ul>
+</div >
+
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<div class="gc-heading-h1 gc-color-primary">Create Account</div>
+			<!-- <div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div> -->
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" [(ngModel)]="signUpName" [ngModelOptions]="{standalone: true}"/>
+			<span class="gc-error-span-container gc-error-span">{{signUpNameErrorMsg}}</span>
+			<input type="email" placeholder="Email" [(ngModel)]="signUpEmail" [ngModelOptions]="{standalone: true}"/>
+			<span class="gc-error-span-container gc-error-span">{{signUpEmailErrorMsg}}</span>
+			<input type="password" placeholder="Password" [(ngModel)]="signUpPassword" [ngModelOptions]="{standalone: true}"/>
+			<span class="gc-error-span-container gc-error-span">{{signUpPasswordErrorMsg}}</span>
+			<div class="gc-btn gc-cursor-pointer" (click)="signUp()">Sign Up</div>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<div class="gc-heading-h1 gc-color-primary">Sign in</div>
+		
+			<span>To use your account</span>
+			
+			<input type="email" placeholder="Email"[(ngModel)]="signInEmail" [ngModelOptions]="{standalone: true}" />
+			<span class="gc-error-span-container gc-error-span">{{signInEmailErrorMsg}}</span>
+			<input type="password" placeholder="Password" [(ngModel)]="signInPassword" [ngModelOptions]="{standalone: true}"/>
+			<span class="gc-error-span-container gc-error-span">{{signInPasswordErrorMsg}}</span>
+			<a href="#">Forgot your password?</a>
+			<div class="gc-btn gc-cursor-pointer" (click)="signIn()">Sign In</div>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<div class="gc-heading-h1">Welcome Back!</div>
+				<p>To keep connected with us please login with your personal info</p>
+				<div class="gc-btn2 gc-cursor-pointer" id="signIn">Sign In</div>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<div class="gc-heading-h1">Hello, Friend!</div>
+				<p>Enter your personal details and start journey with us</p>
+				<div class="gc-btn2 gc-cursor-pointer" id="signUp">Sign Up</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div>

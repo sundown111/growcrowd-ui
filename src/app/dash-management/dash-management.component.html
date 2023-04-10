@@ -1,0 +1,18 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-+/sZs1iWdKpJv1LSSqw64zzIyP7FCzkb3wHt7QGtIooZVXKjxjnSGiEZ67i7YrF1TQ0pzjKIZfLs/b7ZlAou0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<div [ngClass]="{'sidenav': true, 'closed': closed}">
+  <div class="sidenav-header">
+    <h2 (click)="toggleSidenav()">My Sidebar</h2>
+  </div>
+  <ul class="sidenav-menu">
+    <li>
+      <a href="#">
+        <i class="fas fa-home"></i> Home
+      </a>
+    </li>
+    
+    <li><a href="#">Menu Item 2</a></li>
+    <li><a href="#">Menu Item 3</a></li>
+    <li><a href="#">Menu Item 

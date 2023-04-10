@@ -1,29 +1,33 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
-import { AppRoutingModule } from './app.routing';
-import { ComponentsModule } from './components/components.module';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { AuthComponent } from './auth/auth.component';
+import { LoginComponent } from './auth/login/login.component';
+import { StaticHomeComponent } from './static-home/static-home.component';
+import { ApiCallService } from './_services/api-call.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { DashManagementComponent } from './dash-management/dash-management.component';
+import { DataLoadingComponent } from './data-loading/data-loading.component';
 
 @NgModule({
-  imports: [
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    ComponentsModule,
-    RouterModule,
-    AppRoutingModule,
-  ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
-
+    AuthComponent,
+    LoginComponent,
+    StaticHomeComponent,
+    DashManagementComponent,
+    DataLoadingComponent
   ],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+  ],
+  providers: [ApiCallService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
